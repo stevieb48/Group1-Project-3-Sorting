@@ -11,7 +11,7 @@ using System.Threading.Tasks;
  * course: COP4365C
  * assignment: Project 3
  * date: 03/25/2018
- * file name: Program.cs
+ * file name: Class1.cs
  * version: 1.0
  */
 namespace Classes
