@@ -11,15 +11,16 @@ using System.Threading.Tasks;
  * course: COP4365C
  * assignment: Project 3
  * date: 03/25/2018
- * file name: ********.cs
+ * file name: Program.cs
  * version: 1.0
  */
 namespace Sorting
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
