@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Classes;
 
 /*
- * This class ...
+ * This class is part of a class library. It is used to ...
  *
  * author: Group 1 (Louis Anthony, Tristan Barrett, Timothy Bates, Stephen Bailey)
  * course: COP4365C
@@ -15,13 +14,10 @@ using Classes;
  * file name: Program.cs
  * version: 1.0
  */
-namespace Sorting
+namespace Classes
 {
-    public class Program
+    public class Class1
     {
-        static void Main(string[] args)
-        {
 
-        }
     }
 }
