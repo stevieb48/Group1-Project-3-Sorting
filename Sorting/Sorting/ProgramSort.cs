@@ -22,7 +22,7 @@ namespace Sorting
         static void Main(string[] args)
         {
             // create array to sort
-            int[] arrayToSort = new int[] { 5, 10, 23, 81, 2, 99, 37, 74, 48, 56};
+            int[] arrayToSort = new int[] { 5, 10, 23, 81, 2, 99, 37, 74, 48, 56 };
 
             // string to hold array elements for display to console
             string arrayToSort_ElementContents = "";
@@ -34,13 +34,13 @@ namespace Sorting
             }
 
             // write to console elements of the array to sort
-            Console.WriteLine("\n Contents of the array prior to sorting - " + arrayToSort_ElementContents);
+            Console.WriteLine("\nContents of the array prior to sorting = " + arrayToSort_ElementContents);
 
             // create new bubble sorter and input the array to sort as a parameter
             BubbleSorter newBubbleSorter = new BubbleSorter(arrayToSort);
 
             // toString to show the contents of the bubble sorter object with array sorted
-            Console.WriteLine(newBubbleSorter.ToString());
+            Console.WriteLine("\nContents of the array after using " + newBubbleSorter.ToString());
 
             // pause the console
             Console.ReadKey();

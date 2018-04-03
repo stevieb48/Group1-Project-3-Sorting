@@ -32,7 +32,7 @@ namespace Sorters
 
         //private method sorts array parameter and sets the sorted array property privately
         private void Sort(int[] unsortedArray)
-        {            
+        {
             // temporary array
             int[] tempArray = unsortedArray;
 
@@ -63,7 +63,7 @@ namespace Sorters
         public string GetContentOfArrayElements()
         {
             string arrayElementContents = "";
-                
+
             foreach (int element in this.SortedArray)
             {
                 arrayElementContents = arrayElementContents + (element.ToString()) + ", ";
@@ -76,7 +76,7 @@ namespace Sorters
         // to Get Content Of Array Elements
         public override string ToString()
         {
-            return ("\nThe Bubble Sorter" + "\n Sorted integer array - " + GetContentOfArrayElements());
+            return ("the BubbleSorter the array = " + GetContentOfArrayElements());
         }
     }
 }
