@@ -17,7 +17,6 @@ using System.Threading.Tasks;
  */
 namespace Sorters
 {
-    //
     public class BubbleSorter
     {
         // auto implemented property
@@ -30,26 +29,34 @@ namespace Sorters
             Sort(unsortedArray);
         }
 
-        //private method sorts array parameter and sets the sorted array property privately
+        //private method sorts array parameter and sets the sorted array property
         private void Sort(int[] unsortedArray)
         {
+            //
+            const int SEARCH_OFFSET = 2;
+
             // temporary array
             int[] tempArray = unsortedArray;
 
             // create temporary element
             int tempElement = tempArray[0];
 
-            //
-            for (int j = 0; j <= tempArray.Length - 2; j++)
+            // counter j is less than number of array elements minus offset
+            for (int j = 0; j <= tempArray.Length - SEARCH_OFFSET; j++)
             {
-                //
-                for (int i = 0; i <= tempArray.Length - 2; i++)
+                // counter i is less than number of array elements minus offset
+                for (int i = 0; i <= tempArray.Length - SEARCH_OFFSET; i++)
                 {
-                    //
+                    // if value in element is greater than the value in the next element of the array
                     if (tempArray[i] > tempArray[i + 1])
                     {
+                        // set temp element to the element in the array that is less
                         tempElement = tempArray[i + 1];
+
+                        // put the element with the greater value into the element where the lesser value was
                         tempArray[i + 1] = tempArray[i];
+
+                        // put the element with the lesser int the element where the greater value was
                         tempArray[i] = tempElement;
                     }
                 }
@@ -60,15 +67,19 @@ namespace Sorters
         }
 
         // private method to store array elements into a string variable
-        public string GetContentOfArrayElements()
+        public string GetContentOfArrayElements(int[] array)
         {
+            // create empty string
             string arrayElementContents = "";
 
-            foreach (int element in this.SortedArray)
+            // for each element in this sorted array
+            foreach (int element in array)
             {
+                // build a string containing all the values separated by a comma
                 arrayElementContents = arrayElementContents + (element.ToString()) + ", ";
             }
 
+            // return the string
             return arrayElementContents;
         }
 
@@ -76,7 +87,7 @@ namespace Sorters
         // to Get Content Of Array Elements
         public override string ToString()
         {
-            return ("the BubbleSorter the array = " + GetContentOfArrayElements());
+            return ("\n the BubbleSorter sorted array = " + GetContentOfArrayElements(this.SortedArray));
         }
     }
 }
