@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
- * This class BubbleSorter is used by ProgramSort. This class constructor takes in an integer array 
+ * This class EnhancedBubbleSorter is used by ProgramSort. This class constructor takes in an integer array 
  * as a parameter, sorts it, and stores the sorted array.
  *
  * author: Group 1 (Louis Anthony, Tristan Barrett, Timothy Bates, Stephen Bailey)
@@ -39,12 +39,12 @@ namespace Sorters
             // create temporary element
             int tempElement = tempArray[0];
 
-            //Star loop equal to number of comparisons to make, then decrement
+            //Start loop equal to number of comparisons to make, then decrement
             for (int j = tempArray.Length - 1; j > 0 ; j--)
             {
                 Boolean swapMade = false; //boolean to keep track of if a swap has been made in the last pass
 
-                for (int i = 0; i <= tempArray.Length - 2; i++)
+                for (int i = 0; i < j; i++)
                 {
                     //
                     if (tempArray[i] > tempArray[i + 1])
