@@ -51,6 +51,15 @@ namespace Sorting
             Console.WriteLine("\nContents of the array after using the EnhancedBubbleSorter."
                                 + newEnhancedBubbleSorter.ToString());
 
+            // write to console elements of the array to sort
+            Console.WriteLine("\nContents of the array prior to sorting = " + arrayToSort_ElementContents);
+
+            // create new bubble sorter and input the array to sort as a parameter
+            EnhancedBubbleSorter newEnhancedBubbleSorter = new EnhancedBubbleSorter(arrayToSort);
+
+            // toString to show the contents of the bubble sorter object with array sorted
+            Console.WriteLine("\nContents of the array after using " + newEnhancedBubbleSorter.ToString());
+
             // pause the console
             Console.ReadKey();
         }

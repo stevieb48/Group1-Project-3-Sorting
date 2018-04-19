@@ -12,11 +12,12 @@ using System.Threading.Tasks;
  * course: COP4365C
  * assignment: Project 3
  * date: 03/25/2018
- * file name: EnhancedBubbleSorter.cs
+ * file name: BubbleSorter.cs
  * version: 1.0
  */
 namespace Sorters
 {
+    //
     public class EnhancedBubbleSorter
     {
         // auto implemented property
@@ -29,7 +30,7 @@ namespace Sorters
             Sort(unsortedArray);
         }
 
-        //private method sorts array parameter and sets the sorted array property
+        //private method sorts array parameter and sets the sorted array property privately
         private void Sort(int[] unsortedArray)
         {
             // temporary array
@@ -38,20 +39,27 @@ namespace Sorters
             // create temporary element
             int tempElement = tempArray[0];
 
-            //
-            for (int i = 1; i <= tempArray.Length - 1; i++)
+            //Start loop equal to number of comparisons to make, then decrement
+            for (int j = tempArray.Length - 1; j > 0 ; j--)
             {
-                //
-                for (int j = 0; j <= tempArray.Length - 1 - i; j++)
+                Boolean swapMade = false; //boolean to keep track of if a swap has been made in the last pass
+
+                for (int i = 0; i < j; i++)
                 {
                     //
-                    if (tempArray[j] > tempArray[j + 1])
+                    if (tempArray[i] > tempArray[i + 1])
                     {
-                        tempElement = tempArray[j + 1];
-                        tempArray[j + 1] = tempArray[j];
-                        tempArray[j] = tempElement;
+                        tempElement = tempArray[i + 1];
+                        tempArray[i + 1] = tempArray[i];
+                        tempArray[i] = tempElement;
+                        swapMade = true;
                     }
                 }
+                if(swapMade == false) //if no swaps were made, break out of the loop
+                {
+                    break;
+                }
+
             }
 
             // set private property with tempArray thats now sorted
@@ -59,11 +67,11 @@ namespace Sorters
         }
 
         // private method to store array elements into a string variable
-        public string GetContentOfArrayElements(int[] array)
+        public string GetContentOfArrayElements()
         {
             string arrayElementContents = "";
 
-            foreach (int element in array)
+            foreach (int element in this.SortedArray)
             {
                 arrayElementContents = arrayElementContents + (element.ToString()) + ", ";
             }
@@ -71,11 +79,11 @@ namespace Sorters
             return arrayElementContents;
         }
 
-        // ToString method to display the contents of the enhanced Bubble Sorter object which calls 
-        // the private method to Get Content Of Array Elements
+        // ToString method to display the contents of the Bubble Sorter object which calls the private method
+        // to Get Content Of Array Elements
         public override string ToString()
         {
-            return ("\n the Enhanced BubbleSorter sorted array = " + GetContentOfArrayElements(this.SortedArray));
+            return ("the EnhancedBubbleSorter the array = " + GetContentOfArrayElements());
         }
     }
 }
